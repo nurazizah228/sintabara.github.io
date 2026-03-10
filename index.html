@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SINTABARA</title>
+  <meta name="author" content="Velile Vamba">
+  <meta content="" name="lorem100">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	<style type="text/css">
+		.carousel-item {
+		  height: 60vh;
+		  min-height: 350px;
+		  background: no-repeat center center scroll;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+
+    .main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+.main .container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+ 
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(32, 57, 84));
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%);
+
+  transition: transform .6s 1s;
+}
+
+.main .container::before,
+.main .container::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .6;
+  transition: .3s;
+}
+
+.main .container::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.main .container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.main .container--active {
+  transition: none;
+}
+
+.main .container--2 {
+  filter: hue-rotate(80deg) saturate(140%);
+}
+
+.main .container--3 {
+  filter: hue-rotate(160deg) saturate(140%);
+}
+
+.main .container p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.main .wrap:hover .container::before,
+.main .wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}
+
+.main .abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%);
+  font-size: 1.6rem;
+} 
+
+/*****************************************/
+.solutions {
+  /* The image used */
+  background-image: url(assets/img/slider-2.jpg);
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.solutions .wrapper{
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.solutions h1{
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  font-size: 48px;
+}
+
+.solutions .panels{
+  list-style-type: none;
+  padding: 0;
+}
+
+.solutions .panels li{
+
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+}
+
+.solutions .panels li div{
+  padding: 10% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  height: 50vh;
+}
+
+/*// ANIMATION STYLES //*/
+
+.solutions .panels div.back {
+  transform: rotateY(90deg);
+}
+
+.solutions .panels div.front {
+  position: absolute;
+}
+
+.solutions .panels li:hover div.front {
+  animation: twirl 0.2s ease-in forwards;
+}
+.solutions .panels li:hover div.back {
+  animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+
+@keyframes twirl {
+  0%{ transform: rotateY(0deg)}
+  100% {transform: rotateY(90deg)}
+}
+
+.why-us {
+  /* The image used */
+  background-image: url(assets/img/slider-2.jpg);
+
+  /* Set a specific height */
+  min-height: 350px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+	</style>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        
+        <!-- <h1 class="text-light"><a href="index.html"><span>Our-Compnay Associate</span></a></h1> -->
+        <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#services">Visi&Misi</a></li>
+          <li><a href="#faq">Motto</a></li>
+          <li><a href="#team">Produk</a></li>
+		      <li><a href="#contact">Contact Us</a></li>
+        </ul>
+            
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url(assets/img/footer-bg.png)">
+          <div class="carousel-caption">
+            <h2 class="display-4"><strong>SINAR TANI BANJARNEGARA</strong></h2>
+            <p class="lead"><strong>Menciptakan Serta Mengembangkan Produk Pangan Lokal Untuk Kesejahteraan Bersama</strong></p>
+          </div>
+  </section><!-- #hero -->
+  
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><strong>Tentang Kami</strong></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/img/Fapas.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+            <h3><strong>KWT SINTABARA</strong></h3>
+            <p style="text-align: justify;">
+               <strong>TANGGAL BERDIRI : 10 JANUARI 2013</strong>
+            </p>
+            <p style="text-align: justify;">
+              <strong>KETUA : MAESAROH</strong>
+            </p>
+            <p style="text-align: justify;">
+              <strong>Anggota : 20 ORANG</strong>
+            </p>
+            <p style="text-align: justify;">
+              <strong>Alamat  : Majalengka RT.01 RW.07 Kec. Bawang Kab. Banjarnegara, Jawa Tengah</strong>
+            </p>
+            <p style="text-align: justify;">
+              Kelompok Wanita Tani (KWT) Sinar Tani atau lebih dikenal dengan sebutan KWT SINTA BARA, didirikan pada tanggal 10 Januari 2013, dan bertempat di Desa Majalengka, RT 01 RW 07, Kecamatan Bawang, Kabupaten Banjarnegara. 
+            </p>
+            <p style="text-align: justify;">
+              Dengan jumlah anggota sebanyak 20 orang, KWT SINTA BARA bertujuan untuk meningkatkan kesejahteraan petani wanita serta mendukung pengembangan sektor pertanian melalui berbagai program pelatihan, penyuluhan, dan inisiatif pemberdayaan ekonomi. Fokus utama kegiatan KWT SINTA BARA adalah pada pengolahan pangan berbahan dasar umbi-umbian seperti singkong, jagung, talas, yang sejalan dengan hasil pertanian yang dominan di wilayah Majalengka. Di antara produk olahan pangan yang terkenal hasil karya KWT SINTA BARA adalah tepung singkong alias mocaf, tiwul instan, tepung pati irut, beragam sambal, kerupuk, dan kue kering. KWT SINTA BARA juga berperan sebagai platform penting untuk pertukaran informasi dan kolaborasi, serta memegang peran representasi dalam pembangunan wilayah, khususnya dalam pengambilan keputusan terkait pertanian dan pembangunan. Dengan semangat kerja sama yang kuat, KWT SINTA BARA meneguhkan komitmennya sebagai agen perubahan positif dalam meningkatkan sektor pertanian dan kesejahteraan wanita di lingkungan mereka, dengan moto “Berproses dengan kerja keras, kerja cerdas, kerja ikhlas demi mencapai keberkahan, kesejahteraan, dan kesuksesan tanpa batas.”.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><strong>VISI & MISI</strong></h2>
+          <p>Visi : Menciptakan serta mengembangkan produk pangan lokal untuk kesejahteraan bersama.</p>
+        </div>
+          <div class="section-title">
+            <p>Misi : Menggali potensi sumber daya sesuai kearifan lokal, Menjaga kualitas produk, Memastikan kebutuhan pelanggan terpenuhi dengan baik dan selalu memprioritaskan kepuasan pelanggan</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="faq" class="call-to-action">
+      <div class="container">
+        
+        <div class="text-center">
+          
+        <div class="section-title">
+          <h2 style="color: #fff;"><strong>MOTTO</strong></h2>
+        </div>
+          <p>Berproses dengan kerja keras, kerja cerdas, kerja ikhlas demi mencapai keberkahan, kesejahteraan dan kesuksesan tanpa batas</p>
+        </div>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+
+    <!-- ======= Our Team Section ======= -->
+<section id="team" class="produk">
+<div class="container">
+
+<h2 class="text-center mb-5"><strong>PRODUK SINTABARA</strong></h2>
+
+<div class="row">
+
+<!-- PRODUK 1 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/mocaf.jpg" alt="">
+<h5> TEPUNG MOCAF</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>TEPUNG MOCAF</h5>
+<p>
+Tepung mocaf adalah singkatan dari Modified Cassava Flour atau tepung singkong termodifikasi. Tepung ini dibuat dari singkong yang telah melalui proses fermentasi, pengeringan, dan penggilingan menjadi bentuk tepung halus. Proses fermentasi mengubah struktur pati singkong sehingga meningkatkan kandungan serat, nutrisi, dan daya cerna, serta mengurangi kadar sianida yang ada dalam singkong mentah. Tidak mengandung gluten, tepung mocaf juga cocok untuk orang-orang dengan sensitivitas atau alergi terhadap gluten. Tepung ini memberikan tekstur yang lembut dan hasil akhir yang renyah pada makanan yang dihasilkan.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 2 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/mie.jpg" alt="">
+<h5>MIE MOCAF</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>MIE MOCAF</h5>
+<p>
+Variasi mie mocaf merupakan jenis mie yang terbuat dari tepung mocaf sebagai bahan dasarnya. Tepung mocaf berasal dari singkong yang telah melalui proses fermentasi dan pengeringan. Mie mocaf ini memiliki tekstur yang kenyal dan khas serta cita rasa yang lezat. Mie mocaf juga memiliki nilai gizi yang tinggi karena kandungan serat dan nutrisi yang terdapat dalam singkong. Mie mocaf menjadi alternatif sehat bagi mereka yang menghindari gluten atau mencari variasi mie yang berbeda. Mie mocaf tersedia dalam berbagai varian, termasuk mie instan, mie basah, dan mie kering, untuk memenuhi selera dan kebutuhan konsumen.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 3 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/pati.jpg" alt="">
+<h5>PATI IRUT</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>PATI IRUT</h5>
+<p>
+Pati irut adalah produk pati yang diperoleh dari umbi-umbian yang disebut irut atau biasa juga disebut garut. Pati ini sering digunakan dalam industri makanan sebagai bahan tambahan untuk menghasilkan tekstur yang lebih padat dan kenyal pada produk makanan seperti kue, kue kering, atau makanan tradisional tertentu. Selain itu, pati irut juga memiliki kandungan nutrisi yang baik dan sering digunakan dalam diet rendah gluten atau sebagai pengganti tepung terigu.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 4 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/gatot.jpg" alt="">
+<h5>GATOT</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>GATOT</h5>
+<p>
+Gatot merupakan makanan tradisional khas Jawa yang terbuat dari singkong yang dikeringkan (gaplek) lalu dimasak kembali dengan cara direbus atau dikukus. Gatot memiliki tekstur kenyal dan biasanya disajikan dengan kelapa parut atau gula sebagai makanan ringan atau pengganti nasi.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 5 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/jagung.jpg" alt="">
+<h5>TEPUNG JAGUNG</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>TEPUNG JAGUNG</h5>
+<p>
+Tepung jagung adalah produk tepung yang dibuat dari biji jagung yang telah digiling menjadi bentuk tepung halus. Proses pembuatannya melibatkan penggilingan biji jagung hingga menjadi bubur, kemudian mengeringkannya menjadi tepung. Tepung jagung umumnya digunakan sebagai bahan pengental atau bahan tambahan dalam pembuatan berbagai macam makanan dan kue. Dikenal karena sifatnya yang bebas gluten, tepung jagung sering menjadi pilihan bagi orang-orang yang memiliki intoleransi gluten atau alergi terhadap gandum.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 6 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/nasi.jpg" alt="">
+<h5>NASI JAGUNG</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>NASI JAGUNG</h5>
+<p>
+Nasi jagung instan adalah produk makanan yang dibuat dari jagung yang telah diolah menjadi bubur, kemudian dikeringkan sehingga menjadi nasi jagung dalam bentuk instan. Pembuatannya melibatkan penggilingan jagung menjadi tepung, kemudian campuran tepung jagung tersebut direbus dan diolah menjadi nasi jagung yang siap saji dengan cepat. Nasi jagung instan umumnya memiliki tekstur yang mirip dengan nasi biasa namun dengan cita rasa yang khas dari jagung.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 7 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/talas.jpg" alt="">
+<h5>TEPUNG TALAS</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>TEPUNG TALAS</h5>
+<p>
+Tepung talas adalah produk tepung yang berasal dari umbi talas. Proses pembuatannya melibatkan penggilingan umbi talas menjadi bentuk tepung halus. Tepung talas umumnya digunakan sebagai bahan baku dalam berbagai resep makanan dan kue. Memiliki kandungan nutrisi yang baik, tepung talas sering digunakan sebagai pengganti tepung terigu dalam pembuatan kue, roti, atau makanan lainnya, terutama untuk orang-orang yang menghindari gluten atau memiliki alergi terhadap terigu.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 8 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/ubi.jpg" alt="">
+<h5>TEPUNG UBI UNGU</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>TEPUNG UBI UNGU</h5>
+<p>
+Tepung ubi ungu adalah produk tepung yang terbuat dari umbi ubi ungu yang telah diolah menjadi bubur dan kemudian dikeringkan menjadi bentuk tepung halus. Tepung ini biasanya digunakan sebagai bahan baku dalam pembuatan berbagai jenis makanan dan kue. Tepung ubi ungu kaya akan antioksidan dan nutrisi, serta memberikan cita rasa yang manis dan sedikit khas .Tepung ubi ungu juga sering digunakan sebagai alternatif pengganti tepung terigu bagi orang-orang yang memiliki alergi terhadap gluten atau mencari variasi rasa yang berbeda .</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUK 9 -->
+<div class="col-md-4">
+<div class="flip-card">
+<div class="flip-card-inner">
+
+<div class="flip-card-front">
+<img src="assets/img/tiwul.jpg" alt="">
+<h5>TIWUL AYU</h5>
+</div>
+
+<div class="flip-card-back">
+<h5>TIWUL AYU</h5>
+<p>
+Tiwul ayu adalah makanan tradisional Jawa yang terbuat dari tiwul, yaitu tepung kasar yang dihasilkan dari penggilingan batang dan daun padi yang kering. Makanan ini umumnya disajikan dalam bentuk dadar tipis yang digulung dan diisi dengan gula merah atau kelapa parut yang telah dimaniskan. Setelah digulung, tiwul ayu biasanya dipotong-potong menjadi bagian kecil sebelum disajikan. Makanan ini memiliki tekstur yang kenyal dan aroma yang khas dari tiwul, serta memberikan rasa manis yang lezat dari isiannya.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-about">
+              <h3>Hubungi Kami Melalui</h3>
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+            </div>
+          </div>
+
+        <div class="col-lg-5 col-md-12">
+        <div class="info">
+
+        <div>
+        <i class="icofont-instagram"></i>
+        <p>
+        <a href="https://www.instagram.com/official.sintabara?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        official.sintabara
+        </a>
+        </p>
+        </div>
+
+        <div>
+        <i class="icofont-phone"></i>
+        <p><a href="https://wa.me/6281226996359" target="_blank">WhatsApp</a></p>
+        </div>
+
+      <div>
+      <i class="icofont-facebook"></i>
+      <p>
+      <a href="https://www.facebook.com/share/1GHLhLQuMh/" target="_blank">
+      Facebook KWT SINTABARA
+      </a>
+      </p>
+      </div>
+
+        </div>
+        </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+   
+    <!-- ======= Map Section ======= -->
+    <section class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.125799500908!2d109.62921791015913!3d-7.451332073401484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aadb3a63774d1%3A0x16b134fce7f38748!2sKWT%20Sinta!5e0!3m2!1sid!2sid!4v1773043172805!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section><!-- End Map Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SINTABARA</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
